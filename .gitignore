@@ -1,0 +1,16 @@
+.vercel
+.DS_Store
+.claude
+.env.local
+.next
+node_modules
+out
+dist
+coverage
+*.log
+tsconfig.tsbuildinfo
+Screenshot *.png
+Screenshot *.jpg
+IMG_*.PNG
+IMG_*.jpg
+IMG_*.jpeg
