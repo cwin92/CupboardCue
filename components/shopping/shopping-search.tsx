@@ -84,7 +84,7 @@ export function ShoppingSearch({ items, catalog, units }: ShoppingSearchProps) {
             <div key={`candidate-${ingredient.key}`} className="shopping-row shopping-row-add">
               <div className="ingredient-line shopping-row-copy">
                 <span>{ingredient.name}</span>
-                <span className="ingredient-line-separator">-</span>
+                <span className="ingredient-line-separator">·</span>
                 <span className="muted-copy">
                   {ingredient.quantity} {ingredient.unit_label}
                 </span>
@@ -124,12 +124,17 @@ export function ShoppingSearch({ items, catalog, units }: ShoppingSearchProps) {
                     </button>
                   </form>
                 ) : (
-                  <div className="ingredient-line">
-                    <span>{ingredient.name}</span>
-                    <span className="ingredient-line-separator">-</span>
-                    <span className="muted-copy">
-                      {ingredient.quantity} {ingredient.unit_label}
-                    </span>
+                  <div className="shopping-row-ingredient">
+                    <div className="ingredient-line">
+                      <span>{ingredient.name}</span>
+                      <span className="ingredient-line-separator">·</span>
+                      <span className="muted-copy">
+                        {ingredient.quantity} {ingredient.unit_label}
+                      </span>
+                    </div>
+                    {ingredient.source_menu_names.length > 0 && (
+                      <p className="shopping-row-source">{ingredient.source_menu_names.join(", ")}</p>
+                    )}
                   </div>
                 )}
               </div>
@@ -154,7 +159,7 @@ export function ShoppingSearch({ items, catalog, units }: ShoppingSearchProps) {
             </div>
           ))}
         </div>
-      ) : !availableResults.length ? (
+      ) : query.trim() ? (
         <div className="empty-state">
           <h3>No matching ingredients</h3>
           <p>Try a shorter name or clear the search.</p>

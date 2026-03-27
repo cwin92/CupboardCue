@@ -32,6 +32,7 @@ export default async function LibraryPage({
         <LibraryBrowser items={items} />
       ) : (
         <EmptyState
+          icon="📖"
           title="Your library is empty"
           description="Start building the foods you can pull into your menu."
           action={

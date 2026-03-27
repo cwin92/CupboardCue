@@ -18,7 +18,7 @@ export function LibrarySections({ sections }: LibrarySectionsProps) {
           <div className="section-heading-row">
             <h2>{sectionName}</h2>
           </div>
-          <div>
+          <div className="library-list">
             {items.map((item) => (
               <div key={item.id} className="library-row">
                 <Link href={`/app/items/${item.id}`} className="library-row-link">

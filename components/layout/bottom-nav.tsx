@@ -26,7 +26,7 @@ export function BottomNav({ pathname }: { pathname: string }) {
 
         return (
           <Link key={link.href} href={link.href} className={cx("bottom-nav-link", active && "active")}>
-            <Icon size={17} strokeWidth={2} />
+            <Icon size={22} strokeWidth={1.75} />
             <span className="bottom-nav-label">{link.label}</span>
           </Link>
         );

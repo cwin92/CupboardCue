@@ -344,7 +344,7 @@ export function ItemForm({ item, mealTypes, cookingTimes, ingredientUnits, error
             {existingIngredients.map((ingredient: Ingredient) => (
               <div key={ingredient.id} className="ingredient-inline-row muted-row">
                 <span>{ingredient.name}</span>
-                <span className="ingredient-line-separator">-</span>
+                <span className="ingredient-line-separator">·</span>
                 <span className="muted-copy">
                   {ingredient.quantity ?? 1} {ingredient.unit_label || "unit"}
                 </span>
@@ -358,7 +358,7 @@ export function ItemForm({ item, mealTypes, cookingTimes, ingredientUnits, error
             {draftIngredients.map((ingredient) => (
               <div key={ingredient.name} className="ingredient-inline-row">
                 <span>{ingredient.name}</span>
-                <span className="ingredient-line-separator">-</span>
+                <span className="ingredient-line-separator">·</span>
                 <span className="muted-copy">
                   {ingredient.quantity} {ingredient.unit_label}
                 </span>

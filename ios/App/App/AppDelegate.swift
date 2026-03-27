@@ -1,4 +1,5 @@
-import UIKit
+igh --version
+mport UIKit
 import Capacitor
 
 @UIApplicationMain

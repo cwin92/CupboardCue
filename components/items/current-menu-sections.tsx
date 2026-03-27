@@ -97,7 +97,7 @@ export function CurrentMenuSections({ sections }: CurrentMenuSectionsProps) {
                 {ingredientPickerItem.ingredients.map((ingredient) => (
                   <div key={ingredient.id} className="ingredient-inline-row">
                     <span>{ingredient.name}</span>
-                    <span className="ingredient-line-separator">-</span>
+                    <span className="ingredient-line-separator">·</span>
                     <span className="muted-copy">
                       {ingredient.quantity ?? 1} {ingredient.unit_label || "unit"}
                     </span>

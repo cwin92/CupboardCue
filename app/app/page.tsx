@@ -39,6 +39,7 @@ export default async function CurrentMenuPage({
         <CurrentMenuSections sections={sections} />
       ) : (
         <EmptyState
+          icon="🥘"
           title="No current menu items yet"
           description="Add foods you have on hand so your menu is ready to browse."
           action={

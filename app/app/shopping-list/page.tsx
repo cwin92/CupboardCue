@@ -25,6 +25,7 @@ export default async function ShoppingListPage({
         <div className="stack-md">
           <ShoppingSearch items={items} catalog={catalog} units={lookup.ingredientUnits} />
           <EmptyState
+            icon="🧺"
             title="No shopping items yet"
             description="Pull in what you need when something sounds worth making."
             action={

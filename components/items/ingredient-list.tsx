@@ -22,7 +22,7 @@ export function IngredientList({
         <div key={ingredient.id} className="ingredient-row">
           <div className="ingredient-line">
             <span>{ingredient.name}</span>
-            <span className="ingredient-line-separator">-</span>
+            <span className="ingredient-line-separator">·</span>
             <span className="muted-copy">
               {ingredient.quantity ?? 1} {ingredient.unit_label || "unit"}
             </span>
